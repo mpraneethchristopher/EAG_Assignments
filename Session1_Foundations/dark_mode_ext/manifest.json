@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Dark Mode",
+  "version": "1.0",
+  "description": "Convert any webpage to dark mode",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Toggle Dark Mode",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+} 

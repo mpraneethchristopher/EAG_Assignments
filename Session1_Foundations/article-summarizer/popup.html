@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Article Summarizer</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    #summary {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .loading {
+      text-align: center;
+      color: #666;
+    }
+    .error {
+      color: #ff0000;
+      margin-top: 10px;
+    }
+    .download-btn {
+      background-color: #2196F3;
+      margin-top: 15px;
+    }
+    .download-btn:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Article Summarizer</h2>
+    <button id="summarizeBtn">Summarize Article</button>
+    <div id="summary"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
