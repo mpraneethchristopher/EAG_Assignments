@@ -3,16 +3,17 @@ const style = document.createElement('style');
 style.textContent = `
   .translation-popup {
     position: fixed;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10000;
     max-width: 300px;
-    font-family: Arial, sans-serif;
+    font-family: inherit;
     font-size: 14px;
     line-height: 1.4;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
   }
   .translation-popup .close-btn {
     position: absolute;
@@ -20,25 +21,47 @@ style.textContent = `
     top: 8px;
     cursor: pointer;
     font-size: 18px;
-    color: #666;
     padding: 4px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
   }
   .translation-popup .close-btn:hover {
-    color: #333;
+    opacity: 1;
   }
   .translation-popup p {
     margin: 0;
     padding-right: 20px;
   }
   .translation-popup.error {
-    background: #fff0f0;
-    color: #d32f2f;
+    background: rgba(255, 0, 0, 0.1) !important;
+    color: #d32f2f !important;
   }
 `;
 document.head.appendChild(style);
 
 let lastSelectedText = '';
 let currentPopup = null;
+
+// Function to get computed styles
+function getComputedStylesForElement(element) {
+  const computedStyle = window.getComputedStyle(element);
+  return {
+    backgroundColor: computedStyle.backgroundColor,
+    color: computedStyle.color,
+    fontFamily: computedStyle.fontFamily
+  };
+}
+
+// Function to get the most contrasting color
+function getContrastColor(bgColor) {
+  // Convert background color to RGB if it's in rgba format
+  let rgb = bgColor.match(/\d+/g);
+  if (!rgb) return '#000000';
+
+  // Calculate relative luminance
+  const luminance = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+  return luminance > 0.5 ? '#000000' : '#ffffff';
+}
 
 // Add debounce function to avoid too many API calls
 function debounce(func, wait) {
@@ -79,11 +102,34 @@ function showPopup(text, isError = false) {
   popup.appendChild(closeBtn);
   popup.appendChild(content);
   
-  // Position popup near selected text
+  // Position popup near selected text and apply styles
   const selection = window.getSelection();
   if (selection.rangeCount > 0) {
     const range = selection.getRangeAt(0);
     const rect = range.getBoundingClientRect();
+    
+    // Get the selected element's styles
+    const selectedElement = selection.anchorNode.parentElement;
+    const styles = getComputedStylesForElement(selectedElement);
+    
+    // Apply the webpage's styles to the popup
+    popup.style.backgroundColor = styles.backgroundColor;
+    popup.style.color = styles.color;
+    popup.style.fontFamily = styles.fontFamily;
+    
+    // Ensure text is readable by adjusting colors if needed
+    if (styles.backgroundColor === 'rgba(0, 0, 0, 0)' || styles.backgroundColor === 'transparent') {
+      popup.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+    }
+    
+    // Add slight transparency to background
+    const bgColor = window.getComputedStyle(popup).backgroundColor;
+    if (bgColor.startsWith('rgb')) {
+      popup.style.backgroundColor = bgColor.replace('rgb', 'rgba').replace(')', ', 0.95)');
+    }
+    
+    // Adjust close button color for contrast
+    closeBtn.style.color = getContrastColor(popup.style.backgroundColor);
     
     // Calculate position to keep popup in viewport
     const viewportWidth = window.innerWidth;

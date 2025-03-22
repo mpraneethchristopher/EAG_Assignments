@@ -1,13 +1,37 @@
-// Create context menu item
-chrome.runtime.onInstalled.addListener(() => {
+// Initialize extension
+chrome.runtime.onInstalled.addListener(async () => {
+  // Create context menu
   chrome.contextMenus.create({
     id: 'translateToGerman',
     title: 'Translate to German',
     contexts: ['selection']
   });
+
+  // Inject content script into all existing tabs
+  const tabs = await chrome.tabs.query({ url: ['http://*/*', 'https://*/*'] });
+  for (const tab of tabs) {
+    try {
+      await chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ['content.js']
+      });
+    } catch (e) {
+      console.error(`Failed to inject content script into tab ${tab.id}:`, e);
+    }
+  }
 });
 
 const GEMINI_API_KEY = 'AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM';
+
+// Handle tab updates
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete' && tab.url && (tab.url.startsWith('http://') || tab.url.startsWith('https://'))) {
+    chrome.scripting.executeScript({
+      target: { tabId: tabId },
+      files: ['content.js']
+    }).catch(err => console.error('Failed to inject content script:', err));
+  }
+});
 
 // Function to translate text
 async function translateText(text, tabId) {
@@ -55,7 +79,16 @@ async function translateText(text, tabId) {
         action: 'showTranslation',
         translation: translation
       }).catch(error => {
-        console.error('Error sending translation to content script:', error);
+        // If message fails, try re-injecting content script and sending again
+        chrome.scripting.executeScript({
+          target: { tabId: tabId },
+          files: ['content.js']
+        }).then(() => {
+          chrome.tabs.sendMessage(tabId, {
+            action: 'showTranslation',
+            translation: translation
+          });
+        }).catch(err => console.error('Failed to inject content script:', err));
       });
     } else {
       throw new Error('Invalid API response format');
@@ -67,7 +100,16 @@ async function translateText(text, tabId) {
       action: 'showTranslation',
       translation: 'Translation error: ' + error.message
     }).catch(err => {
-      console.error('Error sending error message to content script:', err);
+      // If message fails, try re-injecting content script and sending again
+      chrome.scripting.executeScript({
+        target: { tabId: tabId },
+        files: ['content.js']
+      }).then(() => {
+        chrome.tabs.sendMessage(tabId, {
+          action: 'showTranslation',
+          translation: 'Translation error: ' + error.message
+        });
+      }).catch(err => console.error('Failed to inject content script:', err));
     });
   }
 }
