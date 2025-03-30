@@ -1,0 +1,420 @@
+2025-03-30 10:29:41,614 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:29:42,419 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:29:42,436 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:29:42,514 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:31:15,969 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:31:15] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-30 10:31:16,394 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:31:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-30 10:32:29,811 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:32:30,122 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:32:31,803 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:32:31,828 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:32:31,841 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:32:31,925 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:32:31,980 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API
+2025-03-30 10:32:31,980 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API
+2025-03-30 10:32:31,980 - translator_api - INFO - Result: Quickly test the Gemini API
+2025-03-30 10:32:31,980 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API
+2025-03-30 10:32:32,309 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API
+2025-03-30 10:32:32,311 - translator_api - INFO - Result: Error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:32:32,317 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API
+2025-03-30 10:32:32,528 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API
+2025-03-30 10:32:32,529 - translator_api - INFO - Result: Error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:32:32,532 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:32:32,534 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:32:32,536 - translator_api - INFO - Result: Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:32:32,537 - translator_api - INFO - FINAL_ANSWER: Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:32:32,541 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:32:32] "POST /api/translate HTTP/1.1" 200 -
+2025-03-30 10:35:02,770 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:35:02,873 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:35:04,962 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:35:04,982 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:35:05,003 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:35:05,119 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:36:09,442 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:36:09,482 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:36:10,210 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:36:10,233 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:36:10,247 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:36:10,322 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:36:17,842 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:36:17] "GET / HTTP/1.1" 200 -
+2025-03-30 10:36:18,458 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:36:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-30 10:37:01,239 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API
+2025-03-30 10:37:01,489 - translator_api - INFO - API Response status: 400
+2025-03-30 10:37:01,489 - translator_api - ERROR - API Error: {
+  "error": {
+    "code": 400,
+    "message": "API key expired. Please renew the API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key expired. Please renew the API key."
+      }
+    ]
+  }
+}
+
+2025-03-30 10:37:01,501 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:37:01] "[35m[1mPOST /api/direct-translate HTTP/1.1[0m" 500 -
+2025-03-30 10:37:01,509 - translator_api - INFO - Received translation request for text: Quickly test the Gemini API
+2025-03-30 10:37:01,510 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API
+2025-03-30 10:37:01,511 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API
+2025-03-30 10:37:01,512 - translator_api - INFO - Result: Quickly test the Gemini API
+2025-03-30 10:37:01,513 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API
+2025-03-30 10:37:01,674 - translator_api - ERROR - Language detection error: Error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,674 - translator_api - ERROR - Response: {
+  "error": {
+    "code": 400,
+    "message": "API key expired. Please renew the API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key expired. Please renew the API key."
+      }
+    ]
+  }
+}
+
+2025-03-30 10:37:01,702 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API
+2025-03-30 10:37:01,702 - translator_api - INFO - Result: Error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,711 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API
+2025-03-30 10:37:01,906 - translator_api - ERROR - Translation error: Error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,906 - translator_api - ERROR - Response: {
+  "error": {
+    "code": 400,
+    "message": "API key expired. Please renew the API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key expired. Please renew the API key."
+      }
+    ]
+  }
+}
+
+2025-03-30 10:37:01,930 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API
+2025-03-30 10:37:01,930 - translator_api - INFO - Result: Error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,930 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,930 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,945 - translator_api - INFO - Result: Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,948 - translator_api - INFO - FINAL_ANSWER: Translation error: 400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA01RkTCmXN00eLWt1fEsPCmqR5Jg_bkMM
+2025-03-30 10:37:01,949 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:37:01] "POST /api/translate HTTP/1.1" 200 -
+2025-03-30 10:38:35,673 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:38:36,004 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:38:37,561 - translator_api - INFO - API Key being used (first few chars): AIzaSyA0...
+2025-03-30 10:38:37,583 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:38:37,758 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:38:37,818 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:38:38,001 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:39:47,850 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:39:47,850 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:39:47,889 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:39:48,604 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:39:48,604 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:39:48,639 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:39:48,639 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:39:48,706 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:42:19,350 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API
+2025-03-30 10:42:19,352 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 10:42:19,615 - translator_api - INFO - Direct translation response status: 404
+2025-03-30 10:42:19,615 - translator_api - ERROR - Direct translation API Error: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:19,631 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:42:19] "[35m[1mPOST /api/direct-translate HTTP/1.1[0m" 500 -
+2025-03-30 10:42:19,648 - translator_api - INFO - Received translation request for text: Quickly test the Gemini API
+2025-03-30 10:42:19,649 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API
+2025-03-30 10:42:19,650 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API
+2025-03-30 10:42:19,651 - translator_api - INFO - Result: Quickly test the Gemini API
+2025-03-30 10:42:19,652 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API
+2025-03-30 10:42:19,653 - translator_api - INFO - Language detection request payload: {"contents": [{"parts": [{"text": "You are a language detection agent. Detect the language of this text and respond with only the language name: \"Quickly test the Gemini API\""}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 10:42:19,880 - translator_api - INFO - Language detection response status: 404
+2025-03-30 10:42:19,880 - translator_api - ERROR - Language detection API Error: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:19,880 - translator_api - ERROR - Language detection error: Error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:19,896 - translator_api - ERROR - Response: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:19,905 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API
+2025-03-30 10:42:19,907 - translator_api - INFO - Result: Error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:19,914 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API
+2025-03-30 10:42:19,917 - translator_api - INFO - Translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 10:42:20,095 - translator_api - INFO - Translation response status: 404
+2025-03-30 10:42:20,095 - translator_api - ERROR - Translation API Error: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:20,095 - translator_api - ERROR - Translation error: Error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:20,114 - translator_api - ERROR - Response: {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:20,121 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API
+2025-03-30 10:42:20,123 - translator_api - INFO - Result: Error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:20,130 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:20,134 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2025-03-30 10:42:20,137 - translator_api - INFO - Result: Translation error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2025-03-30 10:42:20,137 - translator_api - INFO - FINAL_ANSWER: Translation error: API Error: 404 - {
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.0-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2025-03-30 10:42:20,137 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:42:20] "POST /api/translate HTTP/1.1" 200 -
+2025-03-30 10:44:26,104 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:44:26,280 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:44:29,348 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:44:29,351 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:44:29,403 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:44:29,429 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:44:29,547 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:44:40,187 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:44:40,260 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:44:41,226 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:44:41,242 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:44:41,269 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:44:41,288 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:44:41,366 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:44:56,438 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:44:56,510 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:44:57,403 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:44:57,415 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:44:57,449 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:44:57,478 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:44:57,569 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:45:04,208 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:45:04,485 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:45:05,632 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:45:05,632 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:45:05,670 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:45:05,687 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:45:05,746 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:45:10,040 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:45:10,129 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:45:11,011 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:45:11,011 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:45:11,055 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:45:11,071 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:45:11,146 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:45:25,832 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:45:25,930 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:45:26,899 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:45:26,906 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:45:26,929 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:45:26,949 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:45:26,996 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:45:38,626 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API
+2025-03-30 10:45:38,627 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 10:45:39,219 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 10:45:39,219 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Teste schnell die Gemini API.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.15554162434169225}], "usageMetadata": {"promptTokenCount": 29, "candidatesTokenCount": 7, "totalTokenCount": 36, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 29}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 7}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 10:45:39,231 - translator_api - INFO - Direct translation result: Teste schnell die Gemini API.
+2025-03-30 10:45:39,243 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:45:39] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 10:46:11,905 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:46:11] "POST /api/clear_logs HTTP/1.1" 200 -
+2025-03-30 10:46:17,608 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API
+2025-03-30 10:46:17,610 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 10:46:18,198 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 10:46:18,199 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Teste die Gemini API schnell.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.18199193477630615}], "usageMetadata": {"promptTokenCount": 29, "candidatesTokenCount": 7, "totalTokenCount": 36, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 29}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 7}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 10:46:18,199 - translator_api - INFO - Direct translation result: Teste die Gemini API schnell.
+2025-03-30 10:46:18,199 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:46:18] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 10:46:29,138 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API
+2025-03-30 10:46:29,139 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 10:46:29,674 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 10:46:29,674 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Testen Sie schnell die Gemini API.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.13107262717352974}], "usageMetadata": {"promptTokenCount": 29, "candidatesTokenCount": 9, "totalTokenCount": 38, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 29}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 9}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 10:46:29,674 - translator_api - INFO - Direct translation result: Testen Sie schnell die Gemini API.
+2025-03-30 10:46:29,697 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:46:29] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 10:47:06,166 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:47:06,260 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:47:07,416 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:47:07,432 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:47:07,447 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:47:07,463 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:47:07,525 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:47:20,297 - werkzeug - INFO -  * Detected change in 'D:\\TSAI\\EAG_Repo\\EAG_Assignments\\Session3\\agentic_translator\\translator_api.py', reloading
+2025-03-30 10:47:20,403 - werkzeug - INFO -  * Restarting with stat
+2025-03-30 10:47:21,456 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-03-30 10:47:21,456 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-03-30 10:47:21,484 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:47:21,503 - werkzeug - INFO -  * Debugger PIN: 141-452-746
+2025-03-30 10:47:21,598 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-03-30 10:51:56,693 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API
+2025-03-30 10:51:57,243 - translator_api - INFO - Detected language: English
+2025-03-30 10:51:57,243 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 10:51:57,763 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 10:51:57,763 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Teste schnell die Gemini API.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.15554169246128627}], "usageMetadata": {"promptTokenCount": 29, "candidatesTokenCount": 7, "totalTokenCount": 36, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 29}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 7}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 10:51:57,763 - translator_api - INFO - Direct translation result: Teste schnell die Gemini API.
+2025-03-30 10:51:57,784 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:51:57] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 11:03:06,105 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:03:07,245 - translator_api - INFO - Detected language: English
+2025-03-30 11:03:07,245 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API API quickstart guide\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:03:08,983 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 11:03:08,983 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Testen Sie schnell die Gemini API API-Schnellstartanleitung.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.0009031604975461959}], "usageMetadata": {"promptTokenCount": 33, "candidatesTokenCount": 15, "totalTokenCount": 48, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 33}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 15}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 11:03:08,983 - translator_api - INFO - Direct translation result: Testen Sie schnell die Gemini API API-Schnellstartanleitung.
+2025-03-30 11:03:08,983 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:03:08] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 11:11:10,528 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API
+2025-03-30 11:11:11,316 - translator_api - INFO - Detected language: English
+2025-03-30 11:11:11,316 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:11:11,992 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 11:11:11,992 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Teste schnell die Gemini API.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.15554169246128627}], "usageMetadata": {"promptTokenCount": 29, "candidatesTokenCount": 7, "totalTokenCount": 36, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 29}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 7}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 11:11:11,995 - translator_api - INFO - Direct translation result: Teste schnell die Gemini API.
+2025-03-30 11:11:12,000 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:11:12] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 11:13:12,488 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:13:15,075 - translator_api - INFO - Detected language: English
+2025-03-30 11:13:15,075 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API API quickstart guide\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:13:15,901 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 11:13:15,904 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Testen Sie schnell die Gemini API API-Schnellstartanleitung.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.0009283406659960746}], "usageMetadata": {"promptTokenCount": 33, "candidatesTokenCount": 15, "totalTokenCount": 48, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 33}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 15}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 11:13:15,909 - translator_api - INFO - Direct translation result: Testen Sie schnell die Gemini API API-Schnellstartanleitung.
+2025-03-30 11:13:15,923 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:13:15] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 11:15:14,295 - translator_api - INFO - Direct translation request for: API keys Quickly test the Gemini API API quickstart guide
+2025-03-30 11:15:15,318 - translator_api - INFO - Detected language: English
+2025-03-30 11:15:15,319 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"API keys Quickly test the Gemini API API quickstart guide\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:15:16,050 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 11:15:16,051 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "API-Schl\u00fcssel  Schneller Test der Gemini API API-Schnellstartanleitung\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.11078173235843056}], "usageMetadata": {"promptTokenCount": 35, "candidatesTokenCount": 19, "totalTokenCount": 54, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 35}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 19}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 11:15:16,059 - translator_api - INFO - Direct translation result: API-Schlüssel  Schneller Test der Gemini API API-Schnellstartanleitung
+2025-03-30 11:15:16,070 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:15:16] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 11:18:08,443 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,505 - translator_api - ERROR - Error during direct translation: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F734340>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,510 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:18:08] "[35m[1mPOST /api/direct-translate HTTP/1.1[0m" 500 -
+2025-03-30 11:18:08,745 - translator_api - INFO - Received translation request for text: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,746 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,747 - translator_api - INFO - FUNCTION_CALL: preprocessText|Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,749 - translator_api - INFO - Result: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,750 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,752 - translator_api - INFO - Language detection request payload: {"contents": [{"parts": [{"text": "You are a language detection agent. Detect the language of this text and respond with only the language name: \"Quickly test the Gemini API API quickstart guide\""}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:18:08,763 - translator_api - ERROR - Language detection error: Error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F734AF0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,768 - translator_api - ERROR - Response: No response
+2025-03-30 11:18:08,770 - translator_api - INFO - FUNCTION_CALL: detectLanguage|Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,772 - translator_api - INFO - Result: Error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F734AF0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,774 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,775 - translator_api - INFO - Translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API API quickstart guide\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:18:08,788 - translator_api - ERROR - Translation error: Error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F7348B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,795 - translator_api - ERROR - Response: No response
+2025-03-30 11:18:08,795 - translator_api - INFO - FUNCTION_CALL: translateToGerman|Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:08,796 - translator_api - INFO - Result: Error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F7348B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,803 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F7348B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,805 - translator_api - INFO - FUNCTION_CALL: postprocessTranslation|Translation error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F7348B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,807 - translator_api - INFO - Result: Translation error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F7348B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,808 - translator_api - INFO - FINAL_ANSWER: Translation error: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000023A4F7348B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-30 11:18:08,811 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:18:08] "POST /api/translate HTTP/1.1" 200 -
+2025-03-30 11:18:32,511 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:18:33,210 - translator_api - INFO - Detected language: English
+2025-03-30 11:18:33,211 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API API quickstart guide\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:18:34,025 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 11:18:34,025 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Testen Sie schnell die Gemini API API-Schnellstartanleitung.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.0014290643235047658}], "usageMetadata": {"promptTokenCount": 33, "candidatesTokenCount": 15, "totalTokenCount": 48, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 33}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 15}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 11:18:34,028 - translator_api - INFO - Direct translation result: Testen Sie schnell die Gemini API API-Schnellstartanleitung.
+2025-03-30 11:18:34,036 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:18:34] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 11:18:42,158 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:18:42] "POST /api/clear_logs HTTP/1.1" 200 -
+2025-03-30 11:19:13,254 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:19:14,264 - translator_api - INFO - Detected language: English
+2025-03-30 11:19:14,268 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API API quickstart guide\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:19:17,980 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 11:19:17,981 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Testen Sie schnell die Gemini API API-Schnellstartanleitung.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.0009132968882719676}], "usageMetadata": {"promptTokenCount": 33, "candidatesTokenCount": 15, "totalTokenCount": 48, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 33}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 15}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 11:19:17,984 - translator_api - INFO - Direct translation result: Testen Sie schnell die Gemini API API-Schnellstartanleitung.
+2025-03-30 11:19:17,990 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:19:17] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-03-30 11:20:09,854 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:20:09] "POST /api/clear_logs HTTP/1.1" 200 -
+2025-03-30 11:20:44,058 - translator_api - INFO - Direct translation request for: Quickly test the Gemini API API quickstart guide
+2025-03-30 11:20:50,830 - translator_api - INFO - Detected language: English
+2025-03-30 11:20:50,831 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Quickly test the Gemini API API quickstart guide\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-03-30 11:20:52,013 - translator_api - INFO - Direct translation response status: 200
+2025-03-30 11:20:52,014 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Testen Sie schnell die Gemini API API-Schnellstartanleitung.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.0009132968882719676}], "usageMetadata": {"promptTokenCount": 33, "candidatesTokenCount": 15, "totalTokenCount": 48, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 33}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 15}]}, "modelVersion": "gemini-1.5-flash"}
+2025-03-30 11:20:52,017 - translator_api - INFO - Direct translation result: Testen Sie schnell die Gemini API API-Schnellstartanleitung.
+2025-03-30 11:20:52,023 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:20:52] "POST /api/direct-translate HTTP/1.1" 200 -

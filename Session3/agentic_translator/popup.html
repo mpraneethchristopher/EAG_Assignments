@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agentic German Translator</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    h2 {
+      margin: 0;
+      text-align: center;
+      color: #333;
+    }
+    p {
+      margin: 0;
+      color: #666;
+      line-height: 1.4;
+    }
+    .logs {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    .log-entry {
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed #ddd;
+    }
+    .function-call {
+      color: #0056b3;
+      font-weight: bold;
+    }
+    .clear-logs {
+      margin-top: 8px;
+      padding: 6px 12px;
+      border: none;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background-color 0.2s;
+    }
+    .clear-logs:hover {
+      background-color: #d0d0d0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Agentic German Translator</h2>
+    <p>Select text on any webpage, right-click, and choose "Translate to German" to see the agentic translation process.</p>
+    
+    <h3>Function Call Logs:</h3>
+    <div class="logs" id="logContainer">
+      <div class="log-entry">No logs yet. Translate some text to see the agent in action.</div>
+    </div>
+    
+    <button class="clear-logs" id="clearLogs">Clear Logs</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
