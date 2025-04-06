@@ -25,7 +25,7 @@ mcp = FastMCP("Calculator")
 def add(a: int, b: int) -> int:
     """Add two numbers"""
     print("CALLED: add(a: int, b: int) -> int:")
-    return int(a + b)
+    return f"FINAL_ANSWER: [{int(a + b)}]"
 
 @mcp.tool()
 def add_list(l: list) -> int:

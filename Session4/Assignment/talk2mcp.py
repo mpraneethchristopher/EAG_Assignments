@@ -18,7 +18,7 @@ api_key = os.getenv("GEMINI_API_KEY")
 # client = genai.Client(api_key=api_key)
 client = genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-2.0-flash")
-max_iterations = 3
+max_iterations = 4
 last_response = None
 iteration = 0
 iteration_response = []
@@ -113,10 +113,16 @@ async def main():
                 
                 print("Created system prompt...")
                 
-                system_prompt = f"""You are a math agent solving problems in iterations. You have access to various mathematical tools.
+                system_prompt = f"""You are an agent that can perform mathematical operations and create drawings in MS Paint. You have access to various tools.
 
 Available tools:
 {tools_description}
+
+Your task is to:
+1. Calculate the sum of numbers (if provided)
+2. Open MS Paint
+3. Draw a rectangle at coordinates (583,320) to (783,520)
+4. Add the calculated result as text inside the rectangle
 
 Respond with EXACTLY ONE of these formats:
 1. For function calls:
@@ -125,26 +131,41 @@ Respond with EXACTLY ONE of these formats:
    
    Example: For add(a: integer, b: integer), use:
    FUNCTION_CALL: add|5|3
+   
+   For draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer), use:
+   FUNCTION_CALL: draw_rectangle|550|350|800|600
+   
+   For add_text_in_paint(text: string), use:
+   FUNCTION_CALL: add_text_in_paint|Final Answer: 489
 
 2. For final answers:
    FINAL_ANSWER: [number]
 
 DO NOT include multiple responses. Give ONE response at a time.
-Make sure to provide parameters in the correct order as specified in the function signature."""
+Make sure to provide parameters in the correct order as specified in the function signature.
+After calculating the result, proceed with Paint operations in sequence."""
 
-                query = """Add 45 and 444"""
+                query = """Add 45 and 44, then draw a rectangle in Paint and write the result inside it"""
                 print("Starting iteration loop...")
                 
                 # Use global iteration variables
                 global iteration, last_response
+                paint_steps_done = False
                 
                 while iteration < max_iterations:
                     print(f"\n--- Iteration {iteration + 1} ---")
                     if last_response is None:
                         current_query = query
                     else:
-                        current_query = current_query + "\n\n" + " ".join(iteration_response)
-                        current_query = current_query + "  What should I do next?"
+                        if not paint_steps_done and response_text.startswith("FINAL_ANSWER:"):
+                            current_query = "Now that we have the result, let's draw it in Paint. First, open Paint."
+                            paint_steps_done = True
+                        else:
+                            current_query = current_query + "\n\n" + " ".join(iteration_response)
+                            if paint_steps_done:
+                                current_query += "\nNow draw a rectangle and add the calculated result response_text as text inside it."
+                            else:
+                                current_query += "  What should I do next?"
 
                     # Get model's response with timeout
                     print("Preparing to generate LLM response...")
@@ -178,7 +199,6 @@ Make sure to provide parameters in the correct order as specified in the functio
                                 elif param_info['type'] == 'number':
                                     arguments[param_name] = float(value)
                                 elif param_info['type'] == 'array':
-                                    # Handle array types if needed
                                     arguments[param_name] = eval(value)
                                 else:
                                     arguments[param_name] = value
@@ -201,7 +221,17 @@ Make sure to provide parameters in the correct order as specified in the functio
                                 f"In the {iteration + 1} iteration you called {func_name} with {arguments} parameters, "
                                 f"and the function returned {iteration_result}."
                             )
-                            last_response = iteration_result
+
+                            # Store the numeric result when it's a calculation
+                            if func_name in ['add', 'subtract', 'multiply', 'divide']:
+                                # Format the result as FINAL_ANSWER
+                                last_response = f"FINAL_ANSWER: [{iteration_result}]"
+                            else:
+                                last_response = iteration_result
+
+                            # Add delay after Paint operations
+                            if func_name in ["open_paint", "draw_rectangle", "add_text_in_paint"]:
+                                time.sleep(2)
 
                         except Exception as e:
                             print(f"Error calling tool: {e}")
@@ -209,36 +239,16 @@ Make sure to provide parameters in the correct order as specified in the functio
                             break
 
                     elif response_text.startswith("FINAL_ANSWER:"):
-                        print("\n=== Agent Execution Complete ===")
-                        # Open Paint
-                        print("Opening Paint...")
-                        result = await session.call_tool("open_paint")
-                        print(result.content[0].text)
-                        time.sleep(3) # Wait for Paint to fully open
-                        # Draw a centered rectangle
-                        print("Drawing rectangle...")
-                        result = await session.call_tool(
-                            "draw_rectangle",
-                            arguments={
-                            "x1": 500, # Left edge
-                            "y1": 400, # Top edge
-                            "x2": 800, # Right edge
-                            "y2": 600  # Bottom edge
-                            }
-                        )
-                        print(result.content[0].text)
-                        time.sleep(3) # Wait for rectangle to be drawn
-                        # Add text inside the rectangle
-                        print("Adding text...")
-                        result = await session.call_tool(
-                            "add_text_in_paint",
-                            arguments={
-                            "text": response_text
-                            }
-                        )
-                        print(result.content[0].text)
+                        print("\n=== Calculation Complete, Starting Paint Operations ===")
+                        # Store the FINAL_ANSWER as is for Paint text
+                        last_response = response_text
+                        paint_steps_done = False
+                        continue
 
-                        break
+                    # After drawing rectangle, update query to use full FINAL_ANSWER format
+                    if paint_steps_done and func_name == "draw_rectangle":
+                        current_query = f"Add the text '{last_response}' inside the rectangle"
+                        continue
 
                     iteration += 1
 
