@@ -228,6 +228,7 @@ async def draw_rectangle(x1: int, y1: int, x2: int, y2: int) -> dict:
         start_y = center_y - (y2 - y1) // 2
         
         # Press mouse at starting position
+        # canvas.click_input(coords=(x1, y1))
         canvas.press_mouse_input(coords=(start_x, start_y))
         time.sleep(0.1)
         
@@ -281,37 +282,36 @@ async def add_text_in_paint(text: str) -> dict:
         # Ensure Paint window is active
         if not paint_window.has_focus():
             paint_window.set_focus()
-            time.sleep(0.3)
+            time.sleep(0.5)
         
-        # Click on the Rectangle tool
-        paint_window.click_input(coords=(528, 92))
-        time.sleep(0.3)
+        # Click on the Text tool in the Tools group (coordinates for text tool)
+        paint_window.click_input(coords=(290, 80))  # Adjusted coordinates for text tool
+        time.sleep(0.5)
         
         # Get the canvas area
         canvas = paint_window.child_window(class_name='MSPaintView')
         
-        # Select text tool using keyboard shortcuts
-        paint_window.type_keys('t')
-        time.sleep(0.3)
-        paint_window.type_keys('x')
-        time.sleep(0.3)
+        # Calculate center coordinates based on the rectangle position
+        # Using the coordinates from the output (583,320) to (783,520)
+        center_x = 600  # Middle of rectangle x coordinates (583 + 783) / 2
+        center_y = 300  # Middle of rectangle y coordinates (320 + 520) / 2
         
-        # Click where to start typing
-        canvas.click_input(coords=(810, 533))
-        time.sleep(0.3)
+        # Click where to start typing (center of rectangle)
+        canvas.click_input(coords=(center_x, center_y))
+        time.sleep(0.5)
         
-        # Type the text passed from client
+        # Type the text
         paint_window.type_keys(text)
-        time.sleep(0.3)
+        time.sleep(0.5)
         
-        # Click to exit text mode
-        canvas.click_input(coords=(1050, 800))
+        # Click outside to finish text input
+        canvas.click_input(coords=(center_x + 100, center_y + 100))
         
         return {
             "content": [
                 TextContent(
                     type="text",
-                    text=f"Text:'{text}' added successfully"
+                    text=f"Text '{text}' added successfully at center coordinates ({center_x}, {center_y})"
                 )
             ]
         }
@@ -320,7 +320,7 @@ async def add_text_in_paint(text: str) -> dict:
             "content": [
                 TextContent(
                     type="text",
-                    text=f"Error: {str(e)}"
+                    text=f"Error adding text: {str(e)}"
                 )
             ]
         }
