@@ -8,6 +8,7 @@ from concurrent.futures import TimeoutError
 from functools import partial
 import google.generativeai as genai
 import time
+from win32api import GetSystemMetrics
 
 # Load environment variables from .env file
 load_dotenv()
@@ -22,6 +23,18 @@ max_iterations = 4
 last_response = None
 iteration = 0
 iteration_response = []
+
+# Calculate screen dimensions
+screen_width = GetSystemMetrics(0)
+screen_height = GetSystemMetrics(1)
+
+# Calculate rectangle dimensions (centered on screen)
+rect_width = 200
+rect_height = 200
+x1 = (screen_width - rect_width) // 2
+y1 = (screen_height - rect_height) // 2
+x2 = x1 + rect_width
+y2 = y1 + rect_height
 
 async def generate_with_timeout(client, prompt, timeout=10):
     """Generate content with a timeout"""
@@ -121,7 +134,7 @@ Available tools:
 Your task is to:
 1. Calculate the sum of numbers (if provided)
 2. Open MS Paint
-3. Draw a rectangle at coordinates (583,320) to (783,520)
+3. Draw a rectangle at coordinates (600,300) to (700,500)
 4. Add the calculated result as text inside the rectangle
 
 Respond with EXACTLY ONE of these formats:
@@ -133,7 +146,7 @@ Respond with EXACTLY ONE of these formats:
    FUNCTION_CALL: add|5|3
    
    For draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer), use:
-   FUNCTION_CALL: draw_rectangle|900|600|1000|500
+   FUNCTION_CALL: draw_rectangle|400|300|600|500
    
    For add_text_in_paint(text: string), use:
    FUNCTION_CALL: add_text_in_paint|Final Answer: 489
@@ -163,7 +176,7 @@ After calculating the result, proceed with Paint operations in sequence."""
                         else:
                             current_query = current_query + "\n\n" + " ".join(iteration_response)
                             if paint_steps_done:
-                                current_query += "\nNow draw a rectangle and add the calculated result response_text as text inside it."
+                                current_query += f"\nNow draw a rectangle at ({x1},{y1}) to ({x2},{y2}) and add the calculated result as text inside it."
                             else:
                                 current_query += "  What should I do next?"
 

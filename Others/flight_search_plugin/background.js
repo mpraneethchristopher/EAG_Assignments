@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 // Handle flight search
 async function handleFlightSearch(params) {
-  const { departure, arrival, departureDate, returnDate, passengers, prompts } = params;
+  const { departure, arrival, departureDate, returnDate, passengers } = params;
   
   try {
     // Send request to Python server
@@ -24,8 +24,7 @@ async function handleFlightSearch(params) {
         arrival,
         departureDate,
         returnDate,
-        passengers,
-        prompts
+        passengers
       })
     });
 

@@ -210,45 +210,45 @@ async def draw_rectangle(x1: int, y1: int, x2: int, y2: int) -> dict:
             paint_window.set_focus()
             time.sleep(0.3)
         
-        # Select rectangle tool using keyboard shortcut (Alt+H for Home tab, then R for Rectangle)
-        paint_window.type_keys('%h')  # Alt+H to select Home tab
-        time.sleep(0.2)
-        paint_window.type_keys('r')   # R to select Rectangle tool
+        # Click on the Rectangle tool (adjusted coordinates)
+        paint_window.click_input(coords=(675, 120))  # Rectangle tool coordinates
         time.sleep(0.2)
         
         # Get the canvas area
         canvas = paint_window.child_window(class_name='MSPaintView')
         
-        # Calculate the center of the canvas
+        # Get the canvas rectangle to adjust coordinates
         canvas_rect = canvas.rectangle()
-        center_x = (canvas_rect.left + canvas_rect.right) // 2
-        center_y = (canvas_rect.top + canvas_rect.bottom) // 2
+        canvas_left = canvas_rect.left
+        canvas_top = canvas_rect.top
         
-        # Draw rectangle with proper mouse movement
-        # Start from the top-left corner
-        start_x = center_x - (x2 - x1) // 2
-        start_y = center_y - (y2 - y1) // 2
+        # Adjust coordinates relative to canvas
+        # For ASUS Vivobook, we need to adjust the coordinates to account for:
+        # 1. The toolbar on the left (about 50 pixels)
+        # 2. The menu bar at the top (about 30 pixels)
+        # 3. The canvas offset from the window
+        adjusted_x1 = canvas_left + x1 + 100  # Increased offset for better visibility
+        adjusted_y1 = canvas_top + y1 + 100   # Increased offset for better visibility
+        adjusted_x2 = canvas_left + x2 + 100
+        adjusted_y2 = canvas_top + y2 + 100
         
-        # Press mouse at starting position
-        canvas.press_mouse_input(coords=(start_x, start_y))
-        time.sleep(0.1)
+        # Draw rectangle using adjusted coordinates
+        # First click at starting position
+        canvas.click_input(coords=(adjusted_x1, adjusted_y1))
+        time.sleep(0.2)
         
-        # Move to bottom-right corner
-        end_x = start_x + (x2 - x1)
-        end_y = start_y + (y2 - y1)
+        # Move to end position
+        canvas.move_mouse_input(coords=(adjusted_x2, adjusted_y2))
+        time.sleep(0.2)
         
-        # Move mouse diagonally to draw the rectangle
-        canvas.move_mouse_input(coords=(end_x, end_y))
-        time.sleep(0.1)
-        
-        # Release mouse to complete the rectangle
-        canvas.release_mouse_input(coords=(end_x, end_y))
+        # Click at end position to complete the rectangle
+        canvas.click_input(coords=(adjusted_x2, adjusted_y2))
         
         return {
             "content": [
                 TextContent(
                     type="text",
-                    text=f"Rectangle drawn from ({start_x},{start_y}) to ({end_x},{end_y})"
+                    text=f"Rectangle drawn from ({x1},{y1}) to ({x2},{y2}) with adjusted coordinates ({adjusted_x1},{adjusted_y1}) to ({adjusted_x2},{adjusted_y2})"
                 )
             ]
         }
@@ -263,8 +263,8 @@ async def draw_rectangle(x1: int, y1: int, x2: int, y2: int) -> dict:
         }
 
 @mcp.tool()
-async def add_text_in_paint(text: str) -> dict:
-    """Add text in Paint"""
+async def add_text_in_paint(text: str, x1: int, y1: int, x2: int, y2: int) -> dict:
+    """Add text in Paint at the center of the specified rectangle coordinates"""
     global paint_app
     try:
         if not paint_app:
@@ -285,17 +285,23 @@ async def add_text_in_paint(text: str) -> dict:
             paint_window.set_focus()
             time.sleep(0.5)
         
-        # Click on the Text tool in the Tools group (coordinates for text tool)
-        paint_window.click_input(coords=(290, 80))  # Adjusted coordinates for text tool
+        # Click on the Text tool in the Tools group (correct coordinates for text tool)
+        # The text tool is typically the 8th tool in the toolbar
+        paint_window.click_input(coords=(435, 120))  # Updated coordinates for text tool
         time.sleep(0.5)
         
         # Get the canvas area
         canvas = paint_window.child_window(class_name='MSPaintView')
         
+        # Get the canvas rectangle to adjust coordinates
+        canvas_rect = canvas.rectangle()
+        canvas_left = canvas_rect.left
+        canvas_top = canvas_rect.top
+        
         # Calculate center coordinates based on the rectangle position
-        # Using the coordinates from the output (583,320) to (783,520)
-        center_x = 600  # Middle of rectangle x coordinates (583 + 783) / 2
-        center_y = 300  # Middle of rectangle y coordinates (320 + 520) / 2
+        # Adjust coordinates similar to draw_rectangle
+        center_x = canvas_left + ((x1 + x2) // 2) + 100  # Middle of rectangle x coordinates
+        center_y = canvas_top + ((y1 + y2) // 2) + 100   # Middle of rectangle y coordinates
         
         # Click where to start typing (center of rectangle)
         canvas.click_input(coords=(center_x, center_y))
@@ -306,7 +312,7 @@ async def add_text_in_paint(text: str) -> dict:
         time.sleep(0.5)
         
         # Click outside to finish text input
-        canvas.click_input(coords=(center_x + 100, center_y + 100))
+        canvas.click_input(coords=(center_x + 50, center_y + 50))
         
         return {
             "content": [

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Flight Finder</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+    
+    .error {
+      color: red;
+      padding: 10px;
+      background-color: #ffebee;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+    
+    .flights-list {
+      margin-top: 20px;
+    }
+    
+    .flight-card {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+    
+    .flight-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .airline {
+      font-weight: bold;
+    }
+    
+    .price {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    
+    .time {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    
+    .stops {
+      color: #666;
+      margin-bottom: 5px;
+    }
+    
+    .source {
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    .recommendation {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #e8f5e9;
+      border-radius: 4px;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <h2>Smart Flight Finder</h2>
+  
+  <form id="searchForm">
+    <div class="form-group">
+      <label for="departure">Departure City:</label>
+      <input type="text" id="departure" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="arrival">Arrival City:</label>
+      <input type="text" id="arrival" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="departureDate">Departure Date:</label>
+      <input type="date" id="departureDate" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="returnDate">Return Date (Optional):</label>
+      <input type="date" id="returnDate">
+    </div>
+    
+    <div class="form-group">
+      <label for="passengers">Number of Passengers:</label>
+      <select id="passengers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    
+    <button type="submit">Search Flights</button>
+  </form>
+  
+  <div id="results"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 

@@ -418,3 +418,28 @@
 2025-03-30 11:20:52,014 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "Testen Sie schnell die Gemini API API-Schnellstartanleitung.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.0009132968882719676}], "usageMetadata": {"promptTokenCount": 33, "candidatesTokenCount": 15, "totalTokenCount": 48, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 33}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 15}]}, "modelVersion": "gemini-1.5-flash"}
 2025-03-30 11:20:52,017 - translator_api - INFO - Direct translation result: Testen Sie schnell die Gemini API API-Schnellstartanleitung.
 2025-03-30 11:20:52,023 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 11:20:52] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-04-12 15:41:28,097 - translator_api - INFO - Using fallback API key from Session3 notebook
+2025-04-12 15:41:28,097 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-04-12 15:41:28,097 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-04-12 15:41:28,144 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 15:41:28,144 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 15:41:28,148 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:41:28,838 - translator_api - INFO - Using fallback API key from Session3 notebook
+2025-04-12 15:41:28,838 - translator_api - INFO - API Key being used (first few chars): AIzaSyBk...
+2025-04-12 15:41:28,838 - translator_api - INFO - Starting Agentic Translator API server on http://localhost:5000
+2025-04-12 15:41:28,857 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:41:28,866 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:41:53,892 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:41:53] "GET /api/system-prompts HTTP/1.1" 200 -
+2025-04-12 15:42:00,435 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:42:00] "GET /api/system-prompts HTTP/1.1" 200 -
+2025-04-12 15:42:09,661 - translator_api - INFO - Direct translation request for: Over 18,000 employees who make a difference for the benefit of patients. We are the second largest country representative within the Roche Group
+2025-04-12 15:42:11,629 - translator_api - INFO - Detected language: English
+2025-04-12 15:42:11,629 - translator_api - INFO - Direct translation request payload: {"contents": [{"parts": [{"text": "You are a translator. Translate this English text to German: \"Over 18,000 employees who make a difference for the benefit of patients. We are the second largest country representative within the Roche Group\". Only respond with the German translation, nothing else."}]}], "safetySettings": [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]}
+2025-04-12 15:42:13,703 - translator_api - INFO - Direct translation response status: 200
+2025-04-12 15:42:13,719 - translator_api - INFO - Direct translation API Response: {"candidates": [{"content": {"parts": [{"text": "\u00dcber 18.000 Mitarbeiter, die zum Wohle der Patienten einen Unterschied machen. Wir sind der zweitgr\u00f6\u00dfte Landesgesellschaft innerhalb der Roche Gruppe.\n"}], "role": "model"}, "finishReason": "STOP", "safetyRatings": [{"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}, {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "probability": "NEGLIGIBLE"}], "avgLogprobs": -0.11770383289882115}], "usageMetadata": {"promptTokenCount": 54, "candidatesTokenCount": 35, "totalTokenCount": 89, "promptTokensDetails": [{"modality": "TEXT", "tokenCount": 54}], "candidatesTokensDetails": [{"modality": "TEXT", "tokenCount": 35}]}, "modelVersion": "gemini-1.5-flash"}
+2025-04-12 15:42:13,719 - translator_api - INFO - Direct translation result: Über 18.000 Mitarbeiter, die zum Wohle der Patienten einen Unterschied machen. Wir sind der zweitgrößte Landesgesellschaft innerhalb der Roche Gruppe.
+2025-04-12 15:42:13,719 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:42:13] "POST /api/direct-translate HTTP/1.1" 200 -
+2025-04-12 15:42:15,557 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:42:15] "GET /api/system-prompts HTTP/1.1" 200 -
+2025-04-12 15:43:13,499 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\agentic_translator\\translator_api.py', reloading
+2025-04-12 15:43:13,576 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:43:18,219 - werkzeug - INFO -  * Restarting with stat

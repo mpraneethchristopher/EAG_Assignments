@@ -1,0 +1,956 @@
+2025-04-12 11:24:18,007 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-04-12 11:24:18,007 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:24:18,007 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 11:24:18,830 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 11:24:18,845 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 11:27:20,326 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 11:27:20] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 11:27:20,592 - flight_search - ERROR - Error sending email: (-2147221005, 'Invalid class string', None, None)
+2025-04-12 11:27:20,592 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 11:27:20] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 11:28:35,234 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 11:28:35,322 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 11:28:36,143 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 11:28:36,143 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 11:30:37,652 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 11:30:37] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 11:30:42,011 - flight_search - ERROR - Failed to send email via both SMTP and Outlook: (-2147221005, 'Invalid class string', None, None)
+2025-04-12 11:30:42,011 - flight_search - INFO - Results saved to file: flight_results_20250412_113042.html
+2025-04-12 11:30:42,057 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 11:30:42] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 11:31:42,118 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 11:31:42,176 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 11:31:42,994 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 11:31:42,994 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 11:33:15,487 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 11:33:15,568 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 11:33:16,360 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 11:33:16,360 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 11:34:06,623 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 11:34:06,695 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 11:34:07,448 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 11:34:07,448 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 11:34:34,567 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 11:34:34] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 11:34:38,920 - flight_search - ERROR - Failed to send email via both SMTP and Outlook: (-2147221005, 'Invalid class string', None, None)
+2025-04-12 11:34:38,920 - flight_search - INFO - Results saved to file: flight_results_20250412_113438.html
+2025-04-12 11:34:38,920 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 11:34:38] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 11:41:42,805 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 11:41:42,891 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 11:41:43,651 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 11:41:43,668 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 11:41:53,733 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 11:41:53,809 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 11:41:54,558 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 11:41:54,558 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:27:38,451 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:27:38,543 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:27:39,411 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:27:39,413 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:27:44,452 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:27:44,531 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:27:45,347 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:27:45,347 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:44:29,728 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:44:29,798 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:44:30,411 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:44:30,415 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:44:32,429 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:44:32,471 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:44:32,947 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:44:32,950 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:46:21,398 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:46:21,452 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:46:21,932 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:46:21,934 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:46:36,996 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:46:37,061 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:46:37,523 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:46:37,525 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:47:21,731 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:47:21,776 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:47:22,276 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:47:22,278 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:47:25,293 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:47:25,352 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:47:25,830 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:47:25,832 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:52:00,873 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-04-12 12:52:00,873 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:52:00,874 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:52:01,330 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:52:01,332 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:52:34,068 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 12:52:34] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 12:52:35,483 - flight_search - ERROR - Error in send_email: name 'keyring' is not defined
+2025-04-12 12:52:35,799 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 12:52:35] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 12:53:32,746 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:53:32,793 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:53:33,309 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:53:33,310 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:53:42,354 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:53:42,423 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:53:42,876 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:53:42,878 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:54:12,951 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-04-12 12:54:12,951 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:54:12,952 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:54:13,392 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:54:13,395 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:54:30,835 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 12:54:30] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 12:54:54,448 - flight_search - ERROR - Error in send_email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-73bd21c5f51sm2942386b3a.56 - gsmtp')
+2025-04-12 12:54:54,453 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 12:54:54] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 12:55:56,871 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:55:56,918 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:55:57,453 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:55:57,455 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:56:00,472 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 12:56:00,515 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:56:00,992 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:56:00,995 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 12:56:23,014 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-04-12 12:56:23,015 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:56:23,017 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 12:56:23,562 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 12:56:23,565 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:02:06,986 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:02:06] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:02:11,347 - flight_search - ERROR - Error in send_email: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-04-12 13:02:11,351 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:02:11] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:02:56,386 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:02:56,430 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:02:56,976 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:02:56,978 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:02:58,992 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:02:59,035 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:02:59,551 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:02:59,554 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:03:21,237 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:21] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:03:25,581 - flight_search - WARNING - Failed to send email via localhost:25: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-04-12 13:03:29,639 - flight_search - WARNING - Failed to send email via localhost:587: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-04-12 13:03:32,041 - flight_search - WARNING - Failed to send email via smtp.gmail.com:587: (530, b'5.7.0 Must issue a STARTTLS command first. For more information, go to\n5.7.0  https://support.google.com/a/answer/3221692 and review RFC 3207\n5.7.0 specifications. d9443c01a7336-22ac7b6284dsm62459935ad.38 - gsmtp', 'flight_search@localhost')
+2025-04-12 13:03:37,583 - flight_search - WARNING - Failed to send email via smtp.office365.com:587: (451, b'5.7.3 STARTTLS is required to send mail [MAXPR01CA0097.INDPRD01.PROD.OUTLOOK.COM 2025-04-12T07:33:36.809Z 08DD7977448A3EC5]', 'flight_search@localhost')
+2025-04-12 13:03:37,586 - flight_search - INFO - All SMTP attempts failed. Results saved to file: flight_results_20250412_130337.html
+2025-04-12 13:03:37,587 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:37] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:14:15,768 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:14:15,813 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:14:16,310 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:14:16,312 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:14:34,401 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:14:34,444 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:14:34,917 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:14:34,918 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:15:15,111 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:15:15,154 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:15:15,661 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:15:15,663 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:15:33,743 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:15:33,788 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:15:34,255 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:15:34,257 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:16:58,450 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-04-12 13:16:58,450 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:16:58,452 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:16:58,891 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:16:58,893 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:17:24,679 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:17:24] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:17:24,962 - flight_search - ERROR - Outlook error: (-2147221005, 'Invalid class string', None, None)
+2025-04-12 13:17:31,133 - flight_search - ERROR - SMTP Error: (535, b'5.7.3 Authentication unsuccessful [MA0PR01CA0107.INDPRD01.PROD.OUTLOOK.COM 2025-04-12T07:47:30.385Z 08DD787B51B6C866]')
+2025-04-12 13:17:31,134 - flight_search - INFO - Results saved to file: flight_results_20250412_131731.html
+2025-04-12 13:17:31,135 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:17:31] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:17:54,137 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:17:54,181 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:17:54,667 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:17:54,671 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:18:02,703 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:18:02,744 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:18:03,238 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:18:03,240 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:18:56,465 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:18:56,505 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:18:56,990 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:18:56,993 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:19:00,013 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:19:00,055 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:19:00,556 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:19:00,558 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:26:11,591 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:26:11,632 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:26:12,141 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:26:12,144 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:26:25,199 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:26:25,279 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:26:25,717 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:26:25,720 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:28:25,258 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:28:25,318 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:28:26,536 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:28:26,538 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:29:14,750 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:29:14,860 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:29:15,640 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:29:15,640 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:29:49,800 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:29:49,939 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:29:50,770 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:29:50,773 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:29:56,810 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:29:56,910 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:29:57,679 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:29:57,679 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:37:49,186 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:37:49] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:37:50,633 - flight_search - ERROR - Error in flight search: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-12 13:37:50,649 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:37:50] "[35m[1mPOST /api/search-flights HTTP/1.1[0m" 500 -
+2025-04-12 13:38:07,388 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:38:07] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:38:08,084 - flight_search - ERROR - Error in flight search: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-12 13:38:08,086 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:38:08] "[35m[1mPOST /api/search-flights HTTP/1.1[0m" 500 -
+2025-04-12 13:39:32,108 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:39:32] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:39:32,657 - flight_search - ERROR - Error in flight search: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-04-12 13:39:32,659 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:39:32] "[35m[1mPOST /api/search-flights HTTP/1.1[0m" 500 -
+2025-04-12 13:40:23,826 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.106:5000
+2025-04-12 13:40:23,826 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:40:23,827 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:40:24,495 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:40:24,510 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:40:42,808 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:42] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:40:49,744 - flight_search - ERROR - SMTP Error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-04-12 13:40:49,745 - flight_search - INFO - Results saved to file: flight_results_20250412_134049.html
+2025-04-12 13:40:49,745 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:49] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 13:41:24,829 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:41:26,935 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:41:27,745 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:41:27,745 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 13:41:40,819 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 13:41:40,935 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 13:41:41,684 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 13:41:41,684 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:14:43,599 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:14:43,725 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:14:44,923 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:14:44,939 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:14:52,981 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:14:53,072 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:14:53,787 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:14:53,787 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:17:44,034 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:17:44] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:17:44,302 - flight_search - INFO - Received flight search request: {
+  "departure": "Frankfurt",
+  "arrival": "Chennai",
+  "departureDate": "2025-04-17",
+  "returnDate": "",
+  "passengers": "1"
+}
+2025-04-12 15:17:44,302 - flight_search - INFO - Generated system prompt for flight search
+2025-04-12 15:17:44,302 - flight_search - INFO - Sending request to Gemini API
+2025-04-12 15:17:47,086 - flight_search - INFO - Received response from Gemini API: ```json
+{
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated. Using FRA for Frankfurt and MAA for Chennai."
+  }
+}
+```
+2025-04-12 15:17:47,086 - flight_search - ERROR - Failed to parse Gemini API response: Expecting value: line 1 column 1 (char 0)
+2025-04-12 15:17:47,086 - flight_search - INFO - Using mock data as fallback
+2025-04-12 15:17:47,086 - flight_search - INFO - Attempting to send email with flight results
+2025-04-12 15:17:49,365 - flight_search - ERROR - SMTP Error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-73bd21c3943sm3077385b3a.37 - gsmtp')
+2025-04-12 15:17:49,365 - flight_search - INFO - Results saved to file: flight_results_20250412_151749.html
+2025-04-12 15:17:49,365 - flight_search - INFO - Sending flight search results to client
+2025-04-12 15:17:49,365 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:17:49] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:18:24,833 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:18:27,068 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:18:27,942 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:18:27,942 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:18:31,961 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:18:32,121 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:18:32,869 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:18:32,869 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:18:53,398 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:18:53] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:18:53,667 - flight_search - INFO - Received flight search request: {
+  "departure": "Frankfurt",
+  "arrival": "Chennai",
+  "departureDate": "2025-04-17",
+  "returnDate": "",
+  "passengers": "1"
+}
+2025-04-12 15:18:53,667 - flight_search - INFO - Generated system prompt for flight search
+2025-04-12 15:18:53,667 - flight_search - INFO - Sending request to Gemini API
+2025-04-12 15:18:56,156 - flight_search - INFO - Raw response from Gemini API: ```json
+{
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+```
+2025-04-12 15:18:56,156 - flight_search - INFO - Cleaned response text: {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:18:56,156 - flight_search - INFO - Successfully parsed Gemini API response
+2025-04-12 15:18:56,156 - flight_search - INFO - Attempting to send email with flight results
+2025-04-12 15:18:56,156 - flight_search - ERROR - Error sending email: 'results'
+2025-04-12 15:18:56,156 - flight_search - INFO - Sending flight search results to client
+2025-04-12 15:18:56,163 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:18:56] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:20:01,341 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:20:03,437 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:20:04,211 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:20:04,211 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:20:34,455 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:20:34] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:20:34,721 - flight_search - INFO - 
+==================================================
+2025-04-12 15:20:34,721 - flight_search - INFO - Starting new flight search request
+2025-04-12 15:20:34,721 - flight_search - INFO - ==================================================
+2025-04-12 15:20:34,721 - flight_search - INFO - 
+Request Parameters:
+2025-04-12 15:20:34,721 - flight_search - INFO - Departure: Frankfurt
+2025-04-12 15:20:34,721 - flight_search - INFO - Arrival: Chennai
+2025-04-12 15:20:34,721 - flight_search - INFO - Departure Date: 2025-04-17
+2025-04-12 15:20:34,721 - flight_search - INFO - Return Date: 
+2025-04-12 15:20:34,721 - flight_search - INFO - Passengers: 1
+2025-04-12 15:20:34,721 - flight_search - INFO - 
+Generating system prompt...
+2025-04-12 15:20:34,721 - flight_search - INFO - System prompt generated successfully
+2025-04-12 15:20:34,736 - flight_search - INFO - 
+Preparing Gemini API request...
+2025-04-12 15:20:34,736 - flight_search - INFO - 
+Sending request to Gemini API...
+2025-04-12 15:20:36,651 - flight_search - INFO - 
+Raw Gemini API Response:
+2025-04-12 15:20:36,651 - flight_search - INFO - ```json
+{
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+```
+2025-04-12 15:20:36,667 - flight_search - INFO - 
+Processing Gemini API response...
+2025-04-12 15:20:36,667 - flight_search - INFO - 
+Cleaned response text:
+2025-04-12 15:20:36,667 - flight_search - INFO - {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:20:36,695 - flight_search - INFO - 
+Successfully parsed flight results:
+2025-04-12 15:20:36,695 - flight_search - ERROR - 
+Error in flight search: 'results'
+2025-04-12 15:20:36,696 - flight_search - ERROR - ==================================================
+
+2025-04-12 15:20:36,696 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:20:36] "[35m[1mPOST /api/search-flights HTTP/1.1[0m" 500 -
+2025-04-12 15:21:24,646 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:21:26,831 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:21:28,184 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:21:28,184 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:21:42,278 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:21:42,459 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:21:43,717 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:21:43,722 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:22:03,474 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:22:03] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:22:03,741 - flight_search - INFO - 
+==================================================
+2025-04-12 15:22:03,741 - flight_search - INFO - Starting new flight search request
+2025-04-12 15:22:03,746 - flight_search - INFO - ==================================================
+2025-04-12 15:22:03,746 - flight_search - INFO - 
+Request Parameters:
+2025-04-12 15:22:03,746 - flight_search - INFO - Departure: Frankfurt
+2025-04-12 15:22:03,746 - flight_search - INFO - Arrival: Chennai
+2025-04-12 15:22:03,746 - flight_search - INFO - Departure Date: 2025-04-17
+2025-04-12 15:22:03,750 - flight_search - INFO - Return Date: 
+2025-04-12 15:22:03,750 - flight_search - INFO - Passengers: 1
+2025-04-12 15:22:03,754 - flight_search - INFO - 
+Generating system prompt...
+2025-04-12 15:22:03,754 - flight_search - INFO - System prompt generated successfully
+2025-04-12 15:22:03,757 - flight_search - INFO - 
+Preparing Gemini API request...
+2025-04-12 15:22:03,757 - flight_search - INFO - 
+Sending request to Gemini API...
+2025-04-12 15:22:05,187 - flight_search - INFO - 
+Raw Gemini API Response:
+2025-04-12 15:22:05,188 - flight_search - INFO - ```json
+{
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+```
+2025-04-12 15:22:05,192 - flight_search - INFO - 
+Processing Gemini API response...
+2025-04-12 15:22:05,192 - flight_search - INFO - 
+Cleaned response text:
+2025-04-12 15:22:05,192 - flight_search - INFO - {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:22:05,192 - flight_search - ERROR - 
+Failed to parse Gemini API response: Response missing 'results' key
+2025-04-12 15:22:05,192 - flight_search - ERROR - Response that failed to parse: {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:22:05,192 - flight_search - INFO - 
+Using mock data as fallback...
+2025-04-12 15:22:05,192 - flight_search - INFO - 
+Mock flight results:
+2025-04-12 15:22:05,192 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:22:05,192 - flight_search - INFO - Airline: Lufthansa
+2025-04-12 15:22:05,222 - flight_search - INFO - Departure: 10:00 AM
+2025-04-12 15:22:05,222 - flight_search - INFO - Arrival: 11:30 PM
+2025-04-12 15:22:05,222 - flight_search - INFO - Duration: 9h 30m
+2025-04-12 15:22:05,222 - flight_search - INFO - Stops: Non-stop
+2025-04-12 15:22:05,222 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:22:05,238 - flight_search - INFO - Recommendation: Best direct flight option with good service
+2025-04-12 15:22:05,238 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:22:05,238 - flight_search - INFO - Airline: Emirates
+2025-04-12 15:22:05,254 - flight_search - INFO - Departure: 2:30 PM
+2025-04-12 15:22:05,254 - flight_search - INFO - Arrival: 6:00 AM (next day)
+2025-04-12 15:22:05,254 - flight_search - INFO - Duration: 8h 30m
+2025-04-12 15:22:05,254 - flight_search - INFO - Stops: 1 stop in Dubai
+2025-04-12 15:22:05,254 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:22:05,254 - flight_search - INFO - Recommendation: Good value with short layover in Dubai
+2025-04-12 15:22:05,254 - flight_search - INFO - 
+Attempting to send email with flight results...
+2025-04-12 15:22:08,066 - flight_search - ERROR - SMTP Error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22ac7cb5463sm64375155ad.195 - gsmtp')
+2025-04-12 15:22:08,066 - flight_search - INFO - Results saved to file: flight_results_20250412_152208.html
+2025-04-12 15:22:08,066 - flight_search - WARNING - Email sending failed, results saved to file
+2025-04-12 15:22:08,066 - flight_search - INFO - 
+Sending flight search results to client...
+2025-04-12 15:22:08,066 - flight_search - INFO - ==================================================
+
+2025-04-12 15:22:08,066 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:22:08] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:23:27,358 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:23:29,542 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:23:30,880 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:23:30,889 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:25:21,541 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:25:21,734 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:25:23,127 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:25:23,127 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:25:49,813 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:25:49] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:25:50,079 - flight_search - INFO - 
+==================================================
+2025-04-12 15:25:50,079 - flight_search - INFO - Starting new flight search request
+2025-04-12 15:25:50,079 - flight_search - INFO - ==================================================
+2025-04-12 15:25:50,079 - flight_search - INFO - 
+Request Parameters:
+2025-04-12 15:25:50,079 - flight_search - INFO - Departure: Frankfurt
+2025-04-12 15:25:50,079 - flight_search - INFO - Arrival: Chennai
+2025-04-12 15:25:50,079 - flight_search - INFO - Departure Date: 2025-04-17
+2025-04-12 15:25:50,079 - flight_search - INFO - Return Date: 
+2025-04-12 15:25:50,079 - flight_search - INFO - Passengers: 1
+2025-04-12 15:25:50,079 - flight_search - INFO - 
+Generating system prompt...
+2025-04-12 15:25:50,079 - flight_search - INFO - System prompt generated successfully
+2025-04-12 15:25:50,079 - flight_search - INFO - 
+Preparing Gemini API request...
+2025-04-12 15:25:50,079 - flight_search - INFO - 
+Sending request to Gemini API...
+2025-04-12 15:25:52,749 - flight_search - INFO - 
+Raw Gemini API Response:
+2025-04-12 15:25:52,749 - flight_search - INFO - ```json
+{
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+```
+2025-04-12 15:25:52,749 - flight_search - INFO - 
+Processing Gemini API response...
+2025-04-12 15:25:52,749 - flight_search - INFO - 
+Cleaned response text:
+2025-04-12 15:25:52,749 - flight_search - INFO - {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:25:52,749 - flight_search - ERROR - 
+Failed to parse Gemini API response: Response missing 'results' key and no flight information found
+2025-04-12 15:25:52,749 - flight_search - ERROR - Response that failed to parse: {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-17"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:25:52,749 - flight_search - INFO - 
+Using mock data as fallback...
+2025-04-12 15:25:52,749 - flight_search - INFO - 
+Mock flight results:
+2025-04-12 15:25:52,749 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:25:52,749 - flight_search - INFO - Airline: Lufthansa
+2025-04-12 15:25:52,749 - flight_search - INFO - Price: INR 45,000
+2025-04-12 15:25:52,749 - flight_search - INFO - Departure: 10:00 AM
+2025-04-12 15:25:52,764 - flight_search - INFO - Arrival: 11:30 PM
+2025-04-12 15:25:52,764 - flight_search - INFO - Duration: 9h 30m
+2025-04-12 15:25:52,764 - flight_search - INFO - Stops: Non-stop
+2025-04-12 15:25:52,764 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:25:52,764 - flight_search - INFO - Recommendation: Best direct flight option with good service
+2025-04-12 15:25:52,764 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:25:52,764 - flight_search - INFO - Airline: Emirates
+2025-04-12 15:25:52,764 - flight_search - INFO - Price: INR 42,500
+2025-04-12 15:25:52,764 - flight_search - INFO - Departure: 2:30 PM
+2025-04-12 15:25:52,764 - flight_search - INFO - Arrival: 6:00 AM (next day)
+2025-04-12 15:25:52,764 - flight_search - INFO - Duration: 8h 30m
+2025-04-12 15:25:52,764 - flight_search - INFO - Stops: 1 stop in Dubai
+2025-04-12 15:25:52,764 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:25:52,764 - flight_search - INFO - Recommendation: Good value with short layover in Dubai
+2025-04-12 15:25:52,764 - flight_search - INFO - 
+Attempting to send email with flight results...
+2025-04-12 15:25:55,105 - flight_search - ERROR - SMTP Error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22ac7c97228sm64206895ad.128 - gsmtp')
+2025-04-12 15:25:55,107 - flight_search - INFO - Results saved to file: flight_results_20250412_152555.html
+2025-04-12 15:25:55,107 - flight_search - WARNING - Email sending failed, results saved to file
+2025-04-12 15:25:55,107 - flight_search - INFO - 
+Sending flight search results to client...
+2025-04-12 15:25:55,107 - flight_search - INFO - ==================================================
+
+2025-04-12 15:25:55,107 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:25:55] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:29:06,435 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:29:08,644 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:29:10,057 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:29:10,060 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:29:34,315 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:29:34] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:29:34,581 - flight_search - INFO - 
+==================================================
+2025-04-12 15:29:34,581 - flight_search - INFO - Starting new flight search request
+2025-04-12 15:29:34,581 - flight_search - INFO - ==================================================
+2025-04-12 15:29:34,581 - flight_search - INFO - 
+Request Parameters:
+2025-04-12 15:29:34,581 - flight_search - INFO - Departure: Frankfurt
+2025-04-12 15:29:34,581 - flight_search - INFO - Arrival: Chennai
+2025-04-12 15:29:34,581 - flight_search - INFO - Departure Date: 2025-04-17
+2025-04-12 15:29:34,581 - flight_search - INFO - Return Date: 
+2025-04-12 15:29:34,581 - flight_search - INFO - Passengers: 1
+2025-04-12 15:29:34,581 - flight_search - INFO - 
+Generating system prompt...
+2025-04-12 15:29:34,581 - flight_search - INFO - System prompt generated successfully
+2025-04-12 15:29:34,581 - flight_search - INFO - 
+Preparing Gemini API request...
+2025-04-12 15:29:34,596 - flight_search - INFO - 
+Sending request to Gemini API...
+2025-04-12 15:29:36,760 - flight_search - INFO - 
+Raw Gemini API Response:
+2025-04-12 15:29:36,760 - flight_search - INFO - ```json
+{
+    "results": []
+}
+```
+2025-04-12 15:29:36,760 - flight_search - INFO - 
+Processing Gemini API response...
+2025-04-12 15:29:36,760 - flight_search - INFO - 
+Cleaned response text:
+2025-04-12 15:29:36,760 - flight_search - INFO - {
+    "results": []
+}
+2025-04-12 15:29:36,760 - flight_search - INFO - 
+Successfully parsed flight results:
+2025-04-12 15:29:36,760 - flight_search - INFO - 
+Sending flight search results to client...
+2025-04-12 15:29:36,760 - flight_search - INFO - ==================================================
+
+2025-04-12 15:29:36,760 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:29:36] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:29:58,589 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:29:58] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:29:58,900 - flight_search - INFO - 
+==================================================
+2025-04-12 15:29:58,900 - flight_search - INFO - Starting new flight search request
+2025-04-12 15:29:58,900 - flight_search - INFO - ==================================================
+2025-04-12 15:29:58,900 - flight_search - INFO - 
+Request Parameters:
+2025-04-12 15:29:58,900 - flight_search - INFO - Departure: Frankfurt
+2025-04-12 15:29:58,900 - flight_search - INFO - Arrival: Chennai
+2025-04-12 15:29:58,900 - flight_search - INFO - Departure Date: 2025-04-24
+2025-04-12 15:29:58,900 - flight_search - INFO - Return Date: 
+2025-04-12 15:29:58,900 - flight_search - INFO - Passengers: 1
+2025-04-12 15:29:58,900 - flight_search - INFO - 
+Generating system prompt...
+2025-04-12 15:29:58,900 - flight_search - INFO - System prompt generated successfully
+2025-04-12 15:29:58,900 - flight_search - INFO - 
+Preparing Gemini API request...
+2025-04-12 15:29:58,900 - flight_search - INFO - 
+Sending request to Gemini API...
+2025-04-12 15:30:00,924 - flight_search - INFO - 
+Raw Gemini API Response:
+2025-04-12 15:30:00,936 - flight_search - INFO - ```json
+{
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-24"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+```
+2025-04-12 15:30:00,936 - flight_search - INFO - 
+Processing Gemini API response...
+2025-04-12 15:30:00,936 - flight_search - INFO - 
+Cleaned response text:
+2025-04-12 15:30:00,940 - flight_search - INFO - {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-24"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:30:00,941 - flight_search - ERROR - 
+Failed to parse Gemini API response: Response missing 'results' key and no flight information found
+2025-04-12 15:30:00,941 - flight_search - ERROR - Response that failed to parse: {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-24"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:30:00,941 - flight_search - INFO - 
+Using mock data as fallback...
+2025-04-12 15:30:00,941 - flight_search - INFO - 
+Mock flight results:
+2025-04-12 15:30:00,941 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:30:00,941 - flight_search - INFO - Airline: Lufthansa
+2025-04-12 15:30:00,941 - flight_search - INFO - Price: INR 45,000
+2025-04-12 15:30:00,941 - flight_search - INFO - Departure: 10:00 AM
+2025-04-12 15:30:00,941 - flight_search - INFO - Arrival: 11:30 PM
+2025-04-12 15:30:00,941 - flight_search - INFO - Duration: 9h 30m
+2025-04-12 15:30:00,941 - flight_search - INFO - Stops: Non-stop
+2025-04-12 15:30:00,941 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:30:00,941 - flight_search - INFO - Recommendation: Best direct flight option with good service
+2025-04-12 15:30:00,941 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:30:00,941 - flight_search - INFO - Airline: Emirates
+2025-04-12 15:30:00,941 - flight_search - INFO - Price: INR 42,500
+2025-04-12 15:30:00,941 - flight_search - INFO - Departure: 2:30 PM
+2025-04-12 15:30:00,941 - flight_search - INFO - Arrival: 6:00 AM (next day)
+2025-04-12 15:30:00,941 - flight_search - INFO - Duration: 8h 30m
+2025-04-12 15:30:00,941 - flight_search - INFO - Stops: 1 stop in Dubai
+2025-04-12 15:30:00,941 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:30:00,941 - flight_search - INFO - Recommendation: Good value with short layover in Dubai
+2025-04-12 15:30:00,941 - flight_search - INFO - 
+Sending flight search results to client...
+2025-04-12 15:30:00,941 - flight_search - INFO - ==================================================
+
+2025-04-12 15:30:00,956 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:30:00] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:32:47,418 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:32:49,616 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:32:51,002 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:32:51,002 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:32:52,031 - werkzeug - INFO -  * Detected change in 'D:\\PC\\TSAI\\EAG_Assignments\\Session5\\flight_search_plugin\\flight_server.py', reloading
+2025-04-12 15:32:52,219 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 15:32:53,489 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 15:32:53,489 - werkzeug - INFO -  * Debugger PIN: 989-653-919
+2025-04-12 15:33:19,972 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:33:19] "OPTIONS /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:33:20,239 - flight_search - INFO - 
+==================================================
+2025-04-12 15:33:20,239 - flight_search - INFO - Starting new flight search request
+2025-04-12 15:33:20,239 - flight_search - INFO - ==================================================
+2025-04-12 15:33:20,239 - flight_search - INFO - 
+Request Parameters:
+2025-04-12 15:33:20,239 - flight_search - INFO - Departure: Frankfurt
+2025-04-12 15:33:20,239 - flight_search - INFO - Arrival: Chennai
+2025-04-12 15:33:20,239 - flight_search - INFO - Departure Date: 2025-04-24
+2025-04-12 15:33:20,239 - flight_search - INFO - Return Date: 
+2025-04-12 15:33:20,239 - flight_search - INFO - Passengers: 1
+2025-04-12 15:33:20,239 - flight_search - INFO - 
+Generating system prompt...
+2025-04-12 15:33:20,239 - flight_search - INFO - System prompt generated successfully
+2025-04-12 15:33:20,239 - flight_search - INFO - 
+Preparing Gemini API request...
+2025-04-12 15:33:20,253 - flight_search - INFO - 
+Sending request to Gemini API...
+2025-04-12 15:33:22,778 - flight_search - INFO - 
+Raw Gemini API Response:
+2025-04-12 15:33:22,778 - flight_search - INFO - ```json
+{
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-24"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+```
+2025-04-12 15:33:22,780 - flight_search - INFO - 
+Processing Gemini API response...
+2025-04-12 15:33:22,780 - flight_search - INFO - 
+Cleaned response text:
+2025-04-12 15:33:22,780 - flight_search - INFO - {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-24"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:33:22,780 - flight_search - INFO - 
+Response structure:
+2025-04-12 15:33:22,780 - flight_search - INFO - Type: <class 'dict'>
+2025-04-12 15:33:22,780 - flight_search - INFO - Keys: dict_keys(['type', 'reasoning_type', 'api', 'params', 'validation'])
+2025-04-12 15:33:22,780 - flight_search - INFO - 
+Checking key: type
+2025-04-12 15:33:22,780 - flight_search - INFO - Value type: <class 'str'>
+2025-04-12 15:33:22,780 - flight_search - INFO - 
+Checking key: reasoning_type
+2025-04-12 15:33:22,780 - flight_search - INFO - Value type: <class 'str'>
+2025-04-12 15:33:22,780 - flight_search - INFO - 
+Checking key: api
+2025-04-12 15:33:22,780 - flight_search - INFO - Value type: <class 'str'>
+2025-04-12 15:33:22,795 - flight_search - INFO - 
+Checking key: params
+2025-04-12 15:33:22,795 - flight_search - INFO - Value type: <class 'dict'>
+2025-04-12 15:33:22,795 - flight_search - INFO - 
+Checking key: validation
+2025-04-12 15:33:22,795 - flight_search - INFO - Value type: <class 'dict'>
+2025-04-12 15:33:22,795 - flight_search - ERROR - 
+Failed to parse Gemini API response: Response missing 'results' key and no flight information found
+2025-04-12 15:33:22,795 - flight_search - ERROR - Response that failed to parse: {
+  "type": "api_call",
+  "reasoning_type": "search_planning",
+  "api": "search_skyscanner",
+  "params": {
+    "departure": "FRA",
+    "arrival": "MAA",
+    "date": "2025-04-24"
+  },
+  "validation": {
+    "departure_valid": true,
+    "arrival_valid": true,
+    "date_valid": true,
+    "notes": "All parameters validated"
+  }
+}
+2025-04-12 15:33:22,795 - flight_search - INFO - 
+Using mock data as fallback...
+2025-04-12 15:33:22,795 - flight_search - INFO - 
+Mock flight results:
+2025-04-12 15:33:22,795 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:33:22,795 - flight_search - INFO - Airline: Lufthansa
+2025-04-12 15:33:22,795 - flight_search - INFO - Price: INR 45,000
+2025-04-12 15:33:22,795 - flight_search - INFO - Departure: 10:00 AM
+2025-04-12 15:33:22,811 - flight_search - INFO - Arrival: 11:30 PM
+2025-04-12 15:33:22,811 - flight_search - INFO - Duration: 9h 30m
+2025-04-12 15:33:22,811 - flight_search - INFO - Stops: Non-stop
+2025-04-12 15:33:22,811 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:33:22,811 - flight_search - INFO - Recommendation: Best direct flight option with good service
+2025-04-12 15:33:22,811 - flight_search - INFO - 
+Flight Option:
+2025-04-12 15:33:22,811 - flight_search - INFO - Airline: Emirates
+2025-04-12 15:33:22,811 - flight_search - INFO - Price: INR 42,500
+2025-04-12 15:33:22,811 - flight_search - INFO - Departure: 2:30 PM
+2025-04-12 15:33:22,811 - flight_search - INFO - Arrival: 6:00 AM (next day)
+2025-04-12 15:33:22,811 - flight_search - INFO - Duration: 8h 30m
+2025-04-12 15:33:22,811 - flight_search - INFO - Stops: 1 stop in Dubai
+2025-04-12 15:33:22,811 - flight_search - INFO - Source: Skyscanner
+2025-04-12 15:33:22,811 - flight_search - INFO - Recommendation: Good value with short layover in Dubai
+2025-04-12 15:33:22,811 - flight_search - INFO - 
+Sending flight search results to client...
+2025-04-12 15:33:22,811 - flight_search - INFO - ==================================================
+
+2025-04-12 15:33:22,811 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:33:22] "POST /api/search-flights HTTP/1.1" 200 -
+2025-04-12 15:35:00,977 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:35:00] "[33mGET /api/system-prompts HTTP/1.1[0m" 404 -
+2025-04-12 15:35:15,481 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:35:15] "[33mPOST /api/direct-translate HTTP/1.1[0m" 404 -
+2025-04-12 15:35:15,734 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:35:15] "[33mPOST /api/translate HTTP/1.1[0m" 404 -
+2025-04-12 15:35:28,175 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:35:28] "[33mGET /api/system-prompts HTTP/1.1[0m" 404 -
+2025-04-12 15:35:52,197 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:35:52] "[33mGET /api/system-prompts HTTP/1.1[0m" 404 -
+2025-04-12 15:36:08,273 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 15:36:08] "[33mPOST /api/clear_logs HTTP/1.1[0m" 404 -

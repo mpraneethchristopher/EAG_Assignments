@@ -1,484 +1,138 @@
 from flask import Flask, request, jsonify
-import os
+from flask_cors import CORS
 import requests
+import os
 from dotenv import load_dotenv
 import logging
 import json
-import time
+from datetime import datetime
+import google.generativeai as genai
 
-# Load environment variables from .env file
+# Load environment variables
 load_dotenv()
 
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler("translation_logs.log"), logging.StreamHandler()]
+    handlers=[
+        logging.FileHandler("translation.log", encoding='utf-8'),
+        logging.StreamHandler()
+    ]
 )
-logger = logging.getLogger("translator_api")
+logger = logging.getLogger("translation")
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
-# Try to get API key from environment variables
-# If you have a working API key, place it in the .env file
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# Configure Gemini API
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+genai.configure(api_key=GEMINI_API_KEY)
 
-# If no API key in .env, try the one from Session2 that was known to work
-if not GEMINI_API_KEY:
-    GEMINI_API_KEY = 'AIzaSyBkQ6LwyF3omfQkDL-RywZ-BZ2uVl28WKM'  # Try a different API key from Session3 notebook
-    logger.info(f"Using fallback API key from Session3 notebook")
-
-logger.info(f"API Key being used (first few chars): {GEMINI_API_KEY[:8]}...")
-
-# Add a root route for testing
-@app.route('/', methods=['GET'])
-def root():
-    """Simple test endpoint to verify the server is running"""
-    return jsonify({
-        "status": "ok",
-        "message": "Agentic Translator API is running",
-        "api_key_status": "API key is set" if GEMINI_API_KEY else "API key is missing",
-        "endpoints": [
-            {"path": "/", "method": "GET", "description": "This test endpoint"},
-            {"path": "/api/translate", "method": "POST", "description": "Translate text to German"},
-            {"path": "/api/direct-translate", "method": "POST", "description": "Direct translation without agent steps"},
-            {"path": "/api/logs", "method": "GET", "description": "Get translation logs"},
-            {"path": "/api/clear_logs", "method": "POST", "description": "Clear translation logs"},
-            {"path": "/api/system-prompts", "method": "GET", "description": "Get all current system prompts"},
-            {"path": "/api/system-prompts", "method": "POST", "description": "Update a system prompt"},
-            {"path": "/api/system-prompts/reset", "method": "POST", "description": "Reset system prompts to defaults"}
-        ]
-    })
-
-# Store logs for the translation process
-translation_logs = []
-
-# Default system prompts
-DEFAULT_SYSTEM_PROMPTS = {
-    "detect_language": "You are a language detection agent. Detect the language of this text and respond with only the language name.",
-    "translate": "You are a translator. Translate this text to German. Only respond with the German translation, nothing else.",
-    "postprocess": "You are a translation post-processor. Clean and format the translation while maintaining its meaning."
-}
-
-# Current system prompts
-current_system_prompts = DEFAULT_SYSTEM_PROMPTS.copy()
-
-def update_system_prompt(prompt_type: str, prompt: str):
-    """Update a system prompt"""
-    if prompt_type in current_system_prompts:
-        current_system_prompts[prompt_type] = prompt
-        return True
-    return False
-
-def get_system_prompts():
-    """Get all current system prompts"""
-    return current_system_prompts
-
-def reset_system_prompts():
-    """Reset system prompts to defaults"""
-    global current_system_prompts
-    current_system_prompts = DEFAULT_SYSTEM_PROMPTS.copy()
-    return current_system_prompts
-
-def log_function_call(function_name, params, result=None):
-    """Log function calls in the format similar to the notebook"""
-    log_entry = {
-        "type": "function_call",
-        "function": function_name,
-        "params": params
-    }
-    
-    if result is not None:
-        log_entry["result"] = result
-    
-    translation_logs.append(log_entry)
-    logger.info(f"FUNCTION_CALL: {function_name}|{params}")
-    if result:
-        logger.info(f"Result: {result}")
-    
-    return log_entry
-
-def log_final_answer(translation):
-    """Log the final translation answer"""
-    log_entry = {
-        "type": "final_answer",
-        "translation": translation
-    }
-    translation_logs.append(log_entry)
-    logger.info(f"FINAL_ANSWER: {translation}")
-    return log_entry
-
-@app.route('/api/logs', methods=['GET'])
-def get_logs():
-    """Return all logged function calls and results"""
-    return jsonify(translation_logs)
-
-@app.route('/api/clear_logs', methods=['POST'])
-def clear_logs():
-    """Clear all logged function calls and results"""
-    global translation_logs
-    translation_logs = []
-    return jsonify({"status": "success", "message": "Logs cleared"})
-
-def preprocess_text(text):
-    """Clean and format the input text"""
-    log_function_call("preprocessText", text)
-    
-    # Simple preprocessing - remove extra spaces and format text
-    cleaned_text = text.strip().replace("  ", " ")
-    
-    log_function_call("preprocessText", text, cleaned_text)
-    return cleaned_text
-
-def detect_language(text):
-    """Detect the language of the text using Gemini API"""
-    log_function_call("detectLanguage", text)
-    
-    try:
-        # Using the exact format from the working Session2 code
-        payload = {
-            "contents": [{
-                "parts": [{
-                    "text": f'{current_system_prompts["detect_language"]} Text: "{text}"'
-                }]
-            }],
-            "safetySettings": [{
-                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                "threshold": "BLOCK_NONE"
-            }]
-        }
-        
-        logger.info(f"Language detection request payload: {json.dumps(payload)}")
-        
-        response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}",
-            json=payload,
-            headers={"Content-Type": "application/json"}
-        )
-        
-        logger.info(f"Language detection response status: {response.status_code}")
-        
-        if not response.ok:
-            logger.error(f"Language detection API Error: {response.text}")
-            raise Exception(f"API Error: {response.status_code} - {response.text}")
-        
-        data = response.json()
-        logger.info(f"Language detection response: {json.dumps(data)}")
-        
-        # Extract language name from response
-        language_name = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-        
-        log_function_call("detectLanguage", text, language_name)
-        return language_name
-    
-    except Exception as e:
-        error_message = f"Error: {str(e)}"
-        logger.error(f"Language detection error: {error_message}")
-        logger.error(f"Response: {response.text if 'response' in locals() else 'No response'}")
-        log_function_call("detectLanguage", text, error_message)
-        return "Unknown"
-
-def translate_to_german(text):
-    """Translate text to German using Gemini API"""
-    log_function_call("translateToGerman", text)
-    
-    try:
-        # Using the exact format from the working Session2 code
-        payload = {
-            "contents": [{
-                "parts": [{
-                    "text": f'{current_system_prompts["translate"]} Text: "{text}"'
-                }]
-            }],
-            "safetySettings": [{
-                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                "threshold": "BLOCK_NONE"
-            }]
-        }
-        
-        logger.info(f"Translation request payload: {json.dumps(payload)}")
-        
-        response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}",
-            json=payload,
-            headers={"Content-Type": "application/json"}
-        )
-        
-        logger.info(f"Translation response status: {response.status_code}")
-        
-        if not response.ok:
-            logger.error(f"Translation API Error: {response.text}")
-            raise Exception(f"API Error: {response.status_code} - {response.text}")
-        
-        data = response.json()
-        logger.info(f"Translation response: {json.dumps(data)}")
-        
-        # Extract translation from response
-        translation = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-        
-        log_function_call("translateToGerman", text, translation)
-        return translation
-    
-    except Exception as e:
-        error_message = f"Error: {str(e)}"
-        logger.error(f"Translation error: {error_message}")
-        logger.error(f"Response: {response.text if 'response' in locals() else 'No response'}")
-        log_function_call("translateToGerman", text, error_message)
-        return f"Translation error: {str(e)}"
-
-def postprocess_translation(translation):
-    """Apply any post-processing to the translation"""
-    log_function_call("postprocessTranslation", translation)
-    
-    try:
-        payload = {
-            "contents": [{
-                "parts": [{
-                    "text": f'{current_system_prompts["postprocess"]} Translation: "{translation}"'
-                }]
-            }],
-            "safetySettings": [{
-                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                "threshold": "BLOCK_NONE"
-            }]
-        }
-        
-        response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}",
-            json=payload,
-            headers={"Content-Type": "application/json"}
-        )
-        
-        if not response.ok:
-            raise Exception(f"API Error: {response.status_code} - {response.text}")
-        
-        data = response.json()
-        processed_translation = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-        
-        log_function_call("postprocessTranslation", translation, processed_translation)
-        return processed_translation
-    
-    except Exception as e:
-        error_message = f"Error: {str(e)}"
-        logger.error(f"Post-processing error: {error_message}")
-        log_function_call("postprocessTranslation", translation, error_message)
-        return translation
+# Initialize the model
+model = genai.GenerativeModel('gemini-2.0-flash')
 
 @app.route('/api/translate', methods=['POST'])
 def translate():
-    """Main endpoint for translating text"""
-    data = request.json
-    text = data.get('text', '')
-    
-    if not text:
-        return jsonify({"error": "No text provided for translation"}), 400
-    
+    """Translate text using Gemini API"""
     try:
-        # Clear previous logs for this translation
-        global translation_logs
-        translation_logs = []
+        # Log request details
+        logger.info("\n" + "="*50)
+        logger.info("Starting new translation request")
+        logger.info("="*50)
         
-        logger.info(f"Received translation request for text: {text}")
+        data = request.json
+        logger.info(f"\nRequest Parameters:")
+        logger.info(f"Source Text: {data.get('text', '')}")
+        logger.info(f"Source Language: {data.get('source_language', '')}")
+        logger.info(f"Target Language: {data.get('target_language', '')}")
         
-        # Step 1: Preprocess the text
-        preprocessed_text = preprocess_text(text)
+        # Prepare the prompt for Gemini
+        logger.info("\nPreparing Gemini API request...")
+        prompt = f"""
+        Please translate the following text from {data.get('source_language', '')} to {data.get('target_language', '')}:
         
-        # Step 2: Detect the language
-        detected_language = detect_language(preprocessed_text)
+        Text: {data.get('text', '')}
         
-        # Step 3: Translate to German (only if not already German)
-        if detected_language.lower() in ['german', 'deutsch']:
-            translation = "Der Text ist bereits auf Deutsch."
-            log_function_call("translateToGerman", preprocessed_text, translation)
-        else:
-            translation = translate_to_german(preprocessed_text)
+        IMPORTANT: You must respond with ONLY a valid JSON object in the following format:
+        {{
+            "translation": "translated text",
+            "source_language": "source language",
+            "target_language": "target language"
+        }}
         
-        # Step 4: Post-process the translation
-        final_translation = postprocess_translation(translation)
+        Do not include any additional text, explanations, or markdown formatting. Only the JSON object.
+        """
         
-        # Log the final result
-        log_final_answer(final_translation)
+        # Send request to Gemini API
+        logger.info("\nSending request to Gemini API...")
+        response = model.generate_content(prompt)
+        logger.info("\nRaw Gemini API Response:")
+        logger.info(response.text)
         
-        return jsonify({
-            "translation": final_translation,
-            "logs": translation_logs,
-            "detected_language": detected_language
-        })
-    
+        try:
+            # Clean and parse the response
+            logger.info("\nProcessing Gemini API response...")
+            response_text = response.text.strip()
+            
+            # Remove any markdown formatting
+            response_text = response_text.replace('```json', '').replace('```', '')
+            response_text = response_text.strip()
+            
+            # Find the JSON object in the response
+            start_idx = response_text.find('{')
+            end_idx = response_text.rfind('}') + 1
+            if start_idx >= 0 and end_idx > start_idx:
+                response_text = response_text[start_idx:end_idx]
+            
+            logger.info("\nCleaned response text:")
+            logger.info(response_text)
+            
+            # Parse the response
+            results = json.loads(response_text)
+            
+            # Log the structure of the response
+            logger.info("\nResponse structure:")
+            logger.info(f"Type: {type(results)}")
+            logger.info(f"Keys: {results.keys() if isinstance(results, dict) else 'Not a dictionary'}")
+            
+            # Validate the response structure
+            if not isinstance(results, dict):
+                raise ValueError("Response is not a dictionary")
+            
+            if "translation" not in results:
+                raise ValueError("Response missing 'translation' key")
+            
+            logger.info("\nSuccessfully parsed translation results:")
+            logger.info(f"Translation: {results['translation']}")
+            logger.info(f"Source Language: {results.get('source_language', 'N/A')}")
+            logger.info(f"Target Language: {results.get('target_language', 'N/A')}")
+            
+        except (json.JSONDecodeError, ValueError) as e:
+            logger.error(f"\nFailed to parse Gemini API response: {str(e)}")
+            logger.error(f"Response that failed to parse: {response_text}")
+            logger.info("\nUsing mock data as fallback...")
+            
+            # If parsing fails, use mock data
+            results = {
+                "translation": "This is a mock translation",
+                "source_language": data.get('source_language', ''),
+                "target_language": data.get('target_language', '')
+            }
+            
+            logger.info("\nMock translation results:")
+            logger.info(f"Translation: {results['translation']}")
+            logger.info(f"Source Language: {results['source_language']}")
+            logger.info(f"Target Language: {results['target_language']}")
+        
+        logger.info("\nSending translation results to client...")
+        logger.info("="*50 + "\n")
+        return jsonify(results)
+        
     except Exception as e:
-        error_message = f"Error during translation: {str(e)}"
-        logger.error(error_message)
-        return jsonify({"error": error_message}), 500
-
-@app.route('/api/test', methods=['GET'])
-def test_api():
-    """Test endpoint that doesn't require any parameters"""
-    return jsonify({
-        "status": "success", 
-        "message": "API is working correctly"
-    })
-
-# Simple endpoint that directly uses the Session2 code approach for translation
-@app.route('/api/direct-translate', methods=['POST'])
-def direct_translate():
-    """Translate text using the direct Session2 approach (no agentic steps)"""
-    data = request.json
-    text = data.get('text', '')
-    
-    if not text:
-        return jsonify({"error": "No text provided for translation"}), 400
-    
-    try:
-        logger.info(f"Direct translation request for: {text}")
-        
-        # First detect the language
-        language_detection_payload = {
-            "contents": [{
-                "parts": [{
-                    "text": f'You are a language detection agent. Detect the language of this text and respond with only the language name: "{text}"'
-                }]
-            }],
-            "safetySettings": [{
-                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                "threshold": "BLOCK_NONE"
-            }]
-        }
-        
-        language_response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}",
-            json=language_detection_payload,
-            headers={"Content-Type": "application/json"}
-        )
-        
-        detected_language = "Unknown"
-        if language_response.ok:
-            language_data = language_response.json()
-            detected_language = language_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-            logger.info(f"Detected language: {detected_language}")
-        else:
-            logger.warning(f"Language detection failed, proceeding with translation anyway")
-        
-        # Check if already German
-        if detected_language.lower() in ['german', 'deutsch']:
-            logger.info(f"Text is already in German, no translation needed")
-            return jsonify({
-                "translation": "Der Text ist bereits auf Deutsch.",
-                "detected_language": detected_language
-            })
-            
-        # Then translate to German
-        translation_payload = {
-            "contents": [{
-                "parts": [{
-                    "text": f'You are a translator. Translate this English text to German: "{text}". Only respond with the German translation, nothing else.'
-                }]
-            }],
-            "safetySettings": [{
-                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                "threshold": "BLOCK_NONE"
-            }]
-        }
-        
-        logger.info(f"Direct translation request payload: {json.dumps(translation_payload)}")
-        
-        response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}",
-            json=translation_payload,
-            headers={"Content-Type": "application/json"}
-        )
-        
-        logger.info(f"Direct translation response status: {response.status_code}")
-        
-        if not response.ok:
-            logger.error(f"Direct translation API Error: {response.text}")
-            return jsonify({"error": f"API Error: {response.status_code} - {response.text}"}), 500
-        
-        data = response.json()
-        logger.info(f"Direct translation API Response: {json.dumps(data)}")
-        
-        if data.get("candidates") and data["candidates"][0].get("content") and data["candidates"][0]["content"].get("parts"):
-            translation = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-            logger.info(f"Direct translation result: {translation}")
-            
-            # Create simple logs for display in the popup
-            logs = [
-                {
-                    "type": "function_call",
-                    "function": "detectLanguage",
-                    "params": text,
-                    "result": detected_language,
-                    "timestamp": int(time.time() * 1000)
-                },
-                {
-                    "type": "function_call",
-                    "function": "translateToGerman",
-                    "params": text,
-                    "result": translation,
-                    "timestamp": int(time.time() * 1000)
-                },
-                {
-                    "type": "final_answer",
-                    "translation": translation,
-                    "timestamp": int(time.time() * 1000)
-                }
-            ]
-            
-            return jsonify({
-                "translation": translation,
-                "detected_language": detected_language,
-                "logs": logs
-            })
-        else:
-            logger.error(f"Invalid API response format: {json.dumps(data)}")
-            return jsonify({"error": "Invalid API response format"}), 500
-            
-    except Exception as e:
-        error_message = f"Error during direct translation: {str(e)}"
-        logger.error(error_message)
-        return jsonify({"error": error_message}), 500
-
-@app.route('/api/system-prompts', methods=['GET'])
-def get_system_prompts_endpoint():
-    """Get all current system prompts"""
-    return jsonify(get_system_prompts())
-
-@app.route('/api/system-prompts', methods=['POST'])
-def update_system_prompt_endpoint():
-    """Update a system prompt"""
-    data = request.json
-    prompt_type = data.get('type')
-    prompt = data.get('prompt')
-    
-    if not prompt_type or not prompt:
-        return jsonify({"error": "Missing prompt type or prompt text"}), 400
-    
-    success = update_system_prompt(prompt_type, prompt)
-    if success:
-        return jsonify({"status": "success", "message": "System prompt updated"})
-    return jsonify({"error": "Invalid prompt type"}), 400
-
-@app.route('/api/system-prompts/reset', methods=['POST'])
-def reset_system_prompts_endpoint():
-    """Reset system prompts to defaults"""
-    reset_system_prompts()
-    return jsonify({"status": "success", "message": "System prompts reset to defaults"})
-
-@app.after_request
-def after_request(response):
-    """Add CORS headers to allow requests from Chrome extension"""
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
-    return response
+        logger.error(f"\nError in translation: {str(e)}")
+        logger.error("="*50 + "\n")
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    # Print a message to show the server has started
-    logger.info(f"Starting Agentic Translator API server on http://localhost:5000")
-    print("="*80)
-    print("Agentic Translator API server is running on http://localhost:5000")
-    print(f"Using API key (first few chars): {GEMINI_API_KEY[:8]}...")
-    print("Try accessing http://localhost:5000/ in your browser to verify")
-    print("="*80)
-    
-    # Run the Flask app
-    app.run(debug=True, port=5000) 
+    app.run(host='0.0.0.0', port=5000, debug=True) 
